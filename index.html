@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dots And Boxes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <header class="header">
+                <h1>DOTS & BOXES</h1>
+        </header>
+         
+        <div class="form-style-3">
+            <form>
+                <fieldset>
+                    <legend>Authentification</legend>
+			<div class="welcome hide">You are connected as <span id="name"></span> Click <a href="">here</a> to disconnect</div>
+			<div class="login">
+                        <label for="user"><span>User <span class="required">*</span></span>
+                        <input type="text" id="user" class="input-field" name="user" value="" /></label>
+                        <label for="pass"><span>Password <span class="required">*</span></span>
+                        <input type="password" id="pass" class="input-field" name="pass" value="" /></label>
+                        <label><span>&nbsp;</span><button id='loginButton' type='button'>Login</button></label>
+			</div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset class="gameplay">
+                    <legend>Game Play</legend>
+                        <input id="online" type="radio" name="gameplay" value="online" checked> <span class="radio">Online</span><br>
+                        <input id="ofline" type="radio" name="gameplay" value="ofline" > <span class="radio">Ofline</span><br>
+                </fieldset>
+                <fieldset class="level">
+                    <legend>Level</legend>
+                        <input id="2×3" type="radio" name="level" value="beginner" checked> <span class="radio">Beginner</span><br>
+                        <input id="4×5" type="radio" name="level" value="intermediaire"> <span class="radio">Intermediaire</span><br>
+                        <input id="6×8" type="radio" name="level" value="advanced"> <span class="radio">Advanced</span><br>
+                        <input id="9×11" type="radio" name="level" value="expert"> <span class="radio">Expert</span><br>
+                        <label><span>&nbsp;</span><button id='startGame' type='button'>Start the game</button></label>
+                </fieldset>
+            </form>
+            <fieldset class="Ranking-online">
+                    <legend>Ranking</legend>
+                    <!-- Trigger/Open The Modal -->
+                    <button id="btnBeginner">Beginner</button>
+                    <button id="btnIntermediaire">Intermediaire</button>
+                    <button id="btnAdvanced">Advanced</button>
+                    <button id="btnExpert">Expert</button>
+
+                    <div id="modalBeginner" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <span class="close">×</span>
+                          <h2>Ranking Beginner</h2>
+                        </div>
+                        <div class="modal-body">
+                          <table id="ranking-beginner">
+	                           <tr><th>Name</th><th>Boxes</th><th>Time</th></tr>
+                              
+                            </table>
+
+                        </div>
+                        
+                      </div>
+
+                    </div>
+                    <div id="modalIntermediaire" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <span class="close">×</span>
+                          <h2>Ranking Intermediaire</h2>
+                        </div>
+                        <div class="modal-body">
+                          <table id="ranking-intermediaire">
+	                           <tr><th>Name</th><th>Boxes</th><th>Time</th></tr>
+                              
+                            </table>
+                        </div>
+                        
+                      </div>
+
+                    </div>
+                <div id="modalExpert" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <span class="close">×</span>
+                          <h2>Ranking Advanced</h2>
+                        </div>
+                        <div class="modal-body">
+                          <table id="ranking-advanced">
+	                           <tr><th>Name</th><th>Boxes</th><th>Time</th></tr>
+                                
+                            </table>
+                        </div>
+                        
+                      </div>
+
+                    </div>
+                <div id="modalAdvanced" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <span class="close">×</span>
+                          <h2>Ranking Expert</h2>
+                        </div>
+                        <div class="modal-body">
+                          <table id="ranking-expert">
+	                           <tr><th>Name</th><th>Boxes</th><th>Time</th></tr>
+                              
+                            </table>
+                        </div>
+                        
+                      </div>
+
+                    </div>
+
+                        
+            </fieldset>
+        </div>
+        <div class="form-style-1 hide">
+            <fieldset class="ranking">
+                        <legend>Ranking</legend>
+                        <ol id="ranking"></ol>
+            </fieldset>
+        </div>
+        <div class="board">
+            <div class="scores">
+                <div id="game-area" class="game-area">Please start the game</div>
+                <button id='leaveGame' class="leave" type='button'>Give up waiting</button>
+                <div class="player-board hide">
+                    <div id="player_1" class="player"><span id="playerConnected"></span><span id="score_1"></span></div>
+                    <div class="player">:</div>
+                    <div id="player_2" class="player"><span id="score_2"></span><span id="opponent">Computer</span></div>
+                    <div class="timer">Timer in seconds : <input type="button" value="0" id="txt"></div>
+                </div>
+            </div>
+            <div class="playground hide"></div>
+        </div>
+    <script src="js/ofline.js"></script>
+    <script src="js/online.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
